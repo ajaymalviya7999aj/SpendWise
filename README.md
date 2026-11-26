@@ -1,16 +1,90 @@
-# React + Vite
+ # SpendWise – AI Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SpendWise** is an AI-powered personal expense tracker built using the MERN stack. It helps users manage their income, monthly budgets and expenses while providing AI-powered spending insights.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- User Registration and Login
+- Secure JWT Authentication
+- Add, Edit and Delete Expenses
+- Monthly Income Management
+- Monthly Budget Management
+- Expense Search and Filtering
+- Monthly Spending Overview
+- Interactive Charts and Visualizations
+- AI-Powered Expense Insights using Gemini
+- Responsive Dashboard UI
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Frontend:** React, Vite, CSS, Recharts
 
-## Expanding the ESLint configuration
+**Backend:** Node.js, Express.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Database:** MongoDB
+
+**Authentication:** JWT
+
+**AI Integration:** Google Gemini API
+
+## Project Structure
+
+- `src/` – React frontend
+- `server/` – Express backend
+- `public/` – Public assets
+
+## Installation and Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ajaymalviya7999aj/SpendWise.git
+cd SpendWise
+```
+
+### 2. Install frontend dependencies
+
+```bash
+npm install
+```
+
+### 3. Install backend dependencies
+
+```bash
+cd server
+npm install
+```
+
+### 4. Configure environment variables
+
+Create a `.env` file inside the `server` folder:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+Never upload your actual `.env` file or API keys to GitHub.
+
+### 5. Run the backend
+
+From the `server` folder:
+
+```bash
+npm run dev
+```
+
+### 6. Run the frontend
+
+Open another terminal in the project root:
+
+```bash
+npm run dev
+```
+
+## Author
+
+**Ajay Malviya**
+
+GitHub: https://github.com/ajaymalviya7999aj
