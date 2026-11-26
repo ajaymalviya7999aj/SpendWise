@@ -46,7 +46,8 @@ import {
   CircleCheck,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/expenses";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = `${API_BASE_URL}/api/expenses`;
 const categories = [
   "Food",
   "Travel",
@@ -216,7 +217,7 @@ useEffect(() => {
         throw new Error("Login token nahi mila. Dobara login karo.");
       }
 
-      const response = await fetch("http://localhost:5000/api/budget", {
+      const response = await fetch(`${API_BASE_URL}/api/budget`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -572,7 +573,7 @@ const fetchAIInsights = async () => {
     }
 
     const response = await fetch(
-      "http://localhost:5000/api/ai/insights",
+      `${API_BASE_URL}/api/ai/insights`,
       {
         method: "POST",
         headers: {
@@ -1379,7 +1380,7 @@ const fetchAIInsights = async () => {
                       }
 
                       const response = await fetch(
-                        "http://localhost:5000/api/budget",
+                        `${API_BASE_URL}/api/budget`,
                         {
                           method: "PUT",
                           headers: {
